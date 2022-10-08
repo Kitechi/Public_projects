@@ -1,0 +1,65 @@
+void MainWindow::on_pushButtonDaqSet_clicked()
+{
+    if (ui->checkBox_useCurrentResults->isChecked())
+    {//load all the pars of last scan from file to make sure these settings are all same
+
+    }
+    qDebug()<<"\nMainWindow::on_pushButtonDaqSet_clicked *******Starting a new inspection********";
+    on_lineEditScanHeight_editingFinished();
+    //on_lineEditScanWidth_editingFinished();
+    UpdateSettingsStruct();
+    scansDone = 0;
+    stopPressed = false;
+
+    //on_pushButtonFilterConfig_pressed();
+    if(dataProc->allocateMem()) // MEDIANDEBUG
+    {
+        settingBeforeNewScan();
+        saveSetting(true);
+#if ACTUALSYSTEM
+        disconnect(dataProc,SIGNAL(setStagePosX(uint,bool)),stage,SLOT(setPosX(uint,bool)));
+        disconnect(dataProc,SIGNAL(setStagePosZ(uint,bool)),stage,SLOT(setPosZ(uint,bool)));
+
+        if (ui->checkBox_useCurrentResults->isChecked() == true)
+        {
+            stage->gotoScanStart();
+            while(stage->isReadyForRptScan() == false)
+                QCoreApplication::processEvents();
+        }
+        laser->onEXT();
+        setLdvRange();//ldv->setRange();
+        daq->Configure(false);
+        on_pushButtonLaserControl_toggled(true);//turn on SHT
+        rotStage->startScan(rotInterval,
+                            ui->enumScanScanSpeedDegPerSec->currentText().toInt(),
+                            (scanInfo.scanWidth/linInterval)+1,
+                            TRUE);
+                                                                                                                                                                                                                               //QThread::msleep(2000);
+
+        /*
+         * stage->startScan((float)scanInfo.scanWidth,
+                         (float)scanInfo.scanHeight,
+                         (float )scanInfo.PRF.toFloat(),
+                         (float)scanInfo.scanInterval);
+         */
+#else
+        //daq->Configure(false);
+        /*
+       //dataProc->scanFinished(100);
+       //emit daq->scanFinished(0);
+       //dataProc->setframeNum(0);
+       */
+        rotStage->startScan(chosenRotInterval[ui->enumScanTrigPerRev->currentIndex()],
+                            ui->enumScanScanSpeedDegPerSec->currentText().toInt(),
+                            (scanInfo.scanHeight/linInterval)+1,
+                            TRUE);
+#endif
+        ui->tabWidget->setCurrentIndex(1);
+        printDataSpec();
+    }
+    else
+    {
+        QMessageBox msgBox(QMessageBox::Critical, tr("Error 04-Out Of Memory"),tr("Reduce the number of scan points and try again."), 0, this);
+        msgBox.exec();
+    }
+}

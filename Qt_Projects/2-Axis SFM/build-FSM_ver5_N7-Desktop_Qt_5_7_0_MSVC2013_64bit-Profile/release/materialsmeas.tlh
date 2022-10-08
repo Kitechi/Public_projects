@@ -1,0 +1,793 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 12.00.21005.1 (cfdd5142).
+//
+// c:\qt\projects\2-axis sfm\build-fsm_ver5_n7-desktop_qt_5_7_0_msvc2013_64bit-profile\release\materialsmeas.tlh
+//
+// C++ source equivalent of Win32 type library C:\\MaterialsMeas.tlb
+// compiler-generated file created 03/14/22 at 20:19:29 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("a7e69dda-25c0-4373-add4-9400e56ecb3a"))
+/* LIBID */ __MaterialsMeasLib;
+enum MaterialCodes;
+struct /* coclass */ ParallelPlate;
+struct __declspec(uuid("bf0526cb-2929-4dc8-a39d-7586f468336d"))
+/* dual interface */ IParallelPlate;
+struct /* coclass */ CoaxialProbe;
+struct __declspec(uuid("de176a36-b97a-43c2-975c-53579e70c8d4"))
+/* dual interface */ ICoaxialProbe;
+struct /* coclass */ TransmissionLine;
+struct __declspec(uuid("c543defd-3eee-410a-9591-41e61b0c9f11"))
+/* dual interface */ ITransmissionLine;
+struct /* coclass */ ResonantCavity;
+struct __declspec(uuid("3eac7a04-1de7-4dc6-89b1-4160c9af77d7"))
+/* dual interface */ IResonantCavity;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IParallelPlate, __uuidof(IParallelPlate));
+_COM_SMARTPTR_TYPEDEF(ICoaxialProbe, __uuidof(ICoaxialProbe));
+_COM_SMARTPTR_TYPEDEF(ITransmissionLine, __uuidof(ITransmissionLine));
+_COM_SMARTPTR_TYPEDEF(IResonantCavity, __uuidof(IResonantCavity));
+
+//
+// Type library items
+//
+
+enum MaterialCodes
+{
+    LINEAR_SWEEP = 0,
+    LOG_SWEEP = 1,
+    INCH = 0,
+    MIL = 1,
+    CM = 2,
+    MM = 3,
+    COAX = 0,
+    WAVEGUIDE = 1,
+    FREESPACE = 2,
+    AIR_REFRESH = 0,
+    SHORT_REFRESH = 1,
+    WATER_REFRESH = 2,
+    ECAL_REFRESH = 3,
+    A_PROBE = 0,
+    HIGH_TEMP_PROBE = 1,
+    SLIM_FORM_PROBE = 2,
+    PERFORMANCE_PROBE = 3,
+    LOAD_AIR_SHORT_CALTYPE = 0,
+    AIR_SHORT_WATER_CALTYPE = 1,
+    USER_CALTYPE = 0,
+    AUTO_ON = 1,
+    AUTO_OFF = 0,
+    NR = 0,
+    NIST = 1,
+    FAST = 2,
+    SHORT_BACKED = 3,
+    ARB_BACKED = 4,
+    TWO_THICKNESS = 5,
+    STACK = 6,
+    POLY_UE = 7,
+    POLY_E = 8,
+    HT_LOW_LOSS = 9,
+    LIMITTEST_PASS = 0,
+    LIMITTEST_FAIL = 1,
+    LIMITTEST_NA = 2,
+    FIXTURE16451B = 0,
+    FIXTURE16452A = 1,
+    FIXTURE16453A = 2,
+    FIXTURE16454AL = 3,
+    FIXTURE16454AS = 4,
+    FIXEDPOINT = 0,
+    USERPOINT = 1,
+    VOLTAGE = 0,
+    CURRENT = 1,
+    A = 0,
+    B = 1,
+    C = 2,
+    D = 3,
+    CONTACT = 0,
+    NONCONTACT = 1,
+    SPACER1P3 = 0,
+    SPACER1P5 = 1,
+    SPACER2 = 2,
+    SPACER3 = 3
+};
+
+struct __declspec(uuid("45288e15-e3b4-42c1-9699-298d46994d87"))
+ParallelPlate;
+    // [ default ] interface IParallelPlate
+
+struct __declspec(uuid("bf0526cb-2929-4dc8-a39d-7586f468336d"))
+IParallelPlate : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Init ( );
+    HRESULT Quit ( );
+    HRESULT Show ( );
+    HRESULT Hide ( );
+    HRESULT SaveSetupFile (
+        _bstr_t file );
+    HRESULT OpenSetupFile (
+        _bstr_t file );
+    HRESULT SaveDataFile ( );
+    HRESULT DataToMemory (
+        _bstr_t name );
+    HRESULT Mean ( );
+    HRESULT StdDev ( );
+    HRESULT TriggerMeasurement ( );
+    HRESULT GetStartFrequency (
+        double * start );
+    HRESULT GetStopFrequency (
+        double * stop );
+    HRESULT GetNumberPoints (
+        long * num );
+    HRESULT GetSweepType (
+        long * type );
+    HRESULT GetMeasurement (
+        long num,
+        float * f,
+        float * er,
+        float * ei );
+    HRESULT SetMeasurement (
+        double start,
+        double stop,
+        long num,
+        long mode );
+    HRESULT GetOSC (
+        long * unit,
+        double * level );
+    HRESULT SetOSC (
+        long unit,
+        double level );
+    HRESULT GetMeasTime (
+        BSTR * measTime );
+    HRESULT SetMeasTime (
+        _bstr_t measTime );
+    HRESULT GetPointAverage (
+        long * pointAve );
+    HRESULT SetPointAverage (
+        long pointAve );
+    HRESULT GetSweepAverage (
+        long * pointAve );
+    HRESULT SetSweepAverage (
+        long pointAve );
+    HRESULT GetPointDelay (
+        double * pointDelay );
+    HRESULT SetPointDelay (
+        double pointDelay );
+    HRESULT GetSweepDelay (
+        double * sweepDelay );
+    HRESULT SetSweepDelay (
+        double sweepDelay );
+    HRESULT GetCalibrationPoints (
+        long * calPoints );
+    HRESULT SetCalibrationPoints (
+        long calPoints );
+    HRESULT GetFixture (
+        long * fixture );
+    HRESULT SetFixture (
+        long fixture );
+    HRESULT Get16451B (
+        long * electrode,
+        double * diameter,
+        double * thickness,
+        long * method,
+        double * gap );
+    HRESULT Set16451B (
+        long electrode,
+        double diameter,
+        double thickness,
+        long method,
+        double gap );
+    HRESULT Get16452A (
+        long * cableLength,
+        long * spacer );
+    HRESULT Set16452A (
+        long cableLength,
+        long spacer );
+    HRESULT Get16453A (
+        double * MUTThickness,
+        double * loadReal,
+        double * loadLoss,
+        double * loadThickness );
+    HRESULT Set16453A (
+        double MUTThickness,
+        double loadReal,
+        double loadLoss,
+        double loadThickness );
+    HRESULT Get16454A (
+        double * height,
+        double * innerDiameter,
+        double * outerDiameter );
+    HRESULT Set16454A (
+        double height,
+        double innerDiameter,
+        double outerDiameter );
+    HRESULT GetTemperature (
+        float * temperature );
+    HRESULT SetTemperature (
+        float temperature );
+    HRESULT GetCPNFile (
+        BSTR * cpnFile );
+    HRESULT SetCPNFile (
+        _bstr_t cpnFile );
+    HRESULT GetCorrectionState (
+        VARIANT_BOOL * state );
+    HRESULT SetCorrectionState (
+        VARIANT_BOOL state );
+    HRESULT Open ( );
+    HRESULT Short ( );
+    HRESULT Load ( );
+    HRESULT LLC ( );
+    HRESULT Done ( );
+    HRESULT ShortCompensation ( );
+    HRESULT AdapterSetup ( );
+    HRESULT AdapterSetupShort ( );
+    HRESULT OpenCompensation ( );
+    HRESULT LoadCompensation ( );
+    HRESULT LoadCompensationPass ( );
+    HRESULT ElectrodeAlignment ( );
+    HRESULT ElectrodeAlignmentPass ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Init ( ) = 0;
+      virtual HRESULT __stdcall raw_Quit ( ) = 0;
+      virtual HRESULT __stdcall raw_Show ( ) = 0;
+      virtual HRESULT __stdcall raw_Hide ( ) = 0;
+      virtual HRESULT __stdcall raw_SaveSetupFile (
+        BSTR file ) = 0;
+      virtual HRESULT __stdcall raw_OpenSetupFile (
+        BSTR file ) = 0;
+      virtual HRESULT __stdcall raw_SaveDataFile ( ) = 0;
+      virtual HRESULT __stdcall raw_DataToMemory (
+        BSTR name ) = 0;
+      virtual HRESULT __stdcall raw_Mean ( ) = 0;
+      virtual HRESULT __stdcall raw_StdDev ( ) = 0;
+      virtual HRESULT __stdcall raw_TriggerMeasurement ( ) = 0;
+      virtual HRESULT __stdcall raw_GetStartFrequency (
+        double * start ) = 0;
+      virtual HRESULT __stdcall raw_GetStopFrequency (
+        double * stop ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberPoints (
+        long * num ) = 0;
+      virtual HRESULT __stdcall raw_GetSweepType (
+        long * type ) = 0;
+      virtual HRESULT __stdcall raw_GetMeasurement (
+        long num,
+        float * f,
+        float * er,
+        float * ei ) = 0;
+      virtual HRESULT __stdcall raw_SetMeasurement (
+        double start,
+        double stop,
+        long num,
+        long mode ) = 0;
+      virtual HRESULT __stdcall raw_GetOSC (
+        long * unit,
+        double * level ) = 0;
+      virtual HRESULT __stdcall raw_SetOSC (
+        long unit,
+        double level ) = 0;
+      virtual HRESULT __stdcall raw_GetMeasTime (
+        BSTR * measTime ) = 0;
+      virtual HRESULT __stdcall raw_SetMeasTime (
+        BSTR measTime ) = 0;
+      virtual HRESULT __stdcall raw_GetPointAverage (
+        long * pointAve ) = 0;
+      virtual HRESULT __stdcall raw_SetPointAverage (
+        long pointAve ) = 0;
+      virtual HRESULT __stdcall raw_GetSweepAverage (
+        long * pointAve ) = 0;
+      virtual HRESULT __stdcall raw_SetSweepAverage (
+        long pointAve ) = 0;
+      virtual HRESULT __stdcall raw_GetPointDelay (
+        double * pointDelay ) = 0;
+      virtual HRESULT __stdcall raw_SetPointDelay (
+        double pointDelay ) = 0;
+      virtual HRESULT __stdcall raw_GetSweepDelay (
+        double * sweepDelay ) = 0;
+      virtual HRESULT __stdcall raw_SetSweepDelay (
+        double sweepDelay ) = 0;
+      virtual HRESULT __stdcall raw_GetCalibrationPoints (
+        long * calPoints ) = 0;
+      virtual HRESULT __stdcall raw_SetCalibrationPoints (
+        long calPoints ) = 0;
+      virtual HRESULT __stdcall raw_GetFixture (
+        long * fixture ) = 0;
+      virtual HRESULT __stdcall raw_SetFixture (
+        long fixture ) = 0;
+      virtual HRESULT __stdcall raw_Get16451B (
+        long * electrode,
+        double * diameter,
+        double * thickness,
+        long * method,
+        double * gap ) = 0;
+      virtual HRESULT __stdcall raw_Set16451B (
+        long electrode,
+        double diameter,
+        double thickness,
+        long method,
+        double gap ) = 0;
+      virtual HRESULT __stdcall raw_Get16452A (
+        long * cableLength,
+        long * spacer ) = 0;
+      virtual HRESULT __stdcall raw_Set16452A (
+        long cableLength,
+        long spacer ) = 0;
+      virtual HRESULT __stdcall raw_Get16453A (
+        double * MUTThickness,
+        double * loadReal,
+        double * loadLoss,
+        double * loadThickness ) = 0;
+      virtual HRESULT __stdcall raw_Set16453A (
+        double MUTThickness,
+        double loadReal,
+        double loadLoss,
+        double loadThickness ) = 0;
+      virtual HRESULT __stdcall raw_Get16454A (
+        double * height,
+        double * innerDiameter,
+        double * outerDiameter ) = 0;
+      virtual HRESULT __stdcall raw_Set16454A (
+        double height,
+        double innerDiameter,
+        double outerDiameter ) = 0;
+      virtual HRESULT __stdcall raw_GetTemperature (
+        float * temperature ) = 0;
+      virtual HRESULT __stdcall raw_SetTemperature (
+        float temperature ) = 0;
+      virtual HRESULT __stdcall raw_GetCPNFile (
+        BSTR * cpnFile ) = 0;
+      virtual HRESULT __stdcall raw_SetCPNFile (
+        BSTR cpnFile ) = 0;
+      virtual HRESULT __stdcall raw_GetCorrectionState (
+        VARIANT_BOOL * state ) = 0;
+      virtual HRESULT __stdcall raw_SetCorrectionState (
+        VARIANT_BOOL state ) = 0;
+      virtual HRESULT __stdcall raw_Open ( ) = 0;
+      virtual HRESULT __stdcall raw_Short ( ) = 0;
+      virtual HRESULT __stdcall raw_Load ( ) = 0;
+      virtual HRESULT __stdcall raw_LLC ( ) = 0;
+      virtual HRESULT __stdcall raw_Done ( ) = 0;
+      virtual HRESULT __stdcall raw_ShortCompensation ( ) = 0;
+      virtual HRESULT __stdcall raw_AdapterSetup ( ) = 0;
+      virtual HRESULT __stdcall raw_AdapterSetupShort ( ) = 0;
+      virtual HRESULT __stdcall raw_OpenCompensation ( ) = 0;
+      virtual HRESULT __stdcall raw_LoadCompensation ( ) = 0;
+      virtual HRESULT __stdcall raw_LoadCompensationPass ( ) = 0;
+      virtual HRESULT __stdcall raw_ElectrodeAlignment ( ) = 0;
+      virtual HRESULT __stdcall raw_ElectrodeAlignmentPass ( ) = 0;
+};
+
+struct __declspec(uuid("4cac772f-2697-4537-b435-1654df2f8207"))
+CoaxialProbe;
+    // [ default ] interface ICoaxialProbe
+
+struct __declspec(uuid("de176a36-b97a-43c2-975c-53579e70c8d4"))
+ICoaxialProbe : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Init ( );
+    HRESULT CalibrateProbe ( );
+    HRESULT TriggerProbe ( );
+    HRESULT GetMeasurement (
+        long num,
+        float * f,
+        float * er,
+        float * ei );
+    HRESULT SetMeasurement (
+        double start,
+        double stop,
+        long num,
+        long mode );
+    HRESULT GetNumberPoints (
+        long * num );
+    HRESULT GetStartFrequency (
+        float * start );
+    HRESULT GetStopFrequency (
+        float * stop );
+    HRESULT GetS11Data (
+        long num,
+        float * f,
+        float * s11_real,
+        float * s11_imag );
+    HRESULT GetTemperature (
+        float * temperature );
+    HRESULT SetTemperature (
+        float temperature );
+    HRESULT GetRefreshStd (
+        int * std );
+    HRESULT SetRefreshStd (
+        int std );
+    HRESULT GetProbeType (
+        int * probe );
+    HRESULT SetProbeType (
+        int probe );
+    HRESULT GetCalType (
+        int * cal );
+    HRESULT SetCalType (
+        int cal );
+    HRESULT SaveSetupFile (
+        _bstr_t file );
+    HRESULT OpenSetupFile (
+        _bstr_t file );
+    HRESULT AutoRefreshOnOff (
+        long * OnOff );
+    HRESULT AutoRefreshOn ( );
+    HRESULT AutoRefreshOff ( );
+    HRESULT RefreshCal ( );
+    HRESULT CalibrateProbeStd1 ( );
+    HRESULT CalibrateProbeStd2 ( );
+    HRESULT CalibrateProbeStd3 ( );
+    HRESULT Quit ( );
+    HRESULT Show ( );
+    HRESULT Hide ( );
+    HRESULT SetIFBW (
+        float bw );
+    HRESULT ReadIFBW (
+        float * bw );
+    HRESULT SetPower (
+        float power );
+    HRESULT ReadPower (
+        float * power );
+    HRESULT DataToMemory (
+        _bstr_t name );
+    HRESULT Mean ( );
+    HRESULT StdDev ( );
+    HRESULT SaveDataFile ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Init ( ) = 0;
+      virtual HRESULT __stdcall raw_CalibrateProbe ( ) = 0;
+      virtual HRESULT __stdcall raw_TriggerProbe ( ) = 0;
+      virtual HRESULT __stdcall raw_GetMeasurement (
+        long num,
+        float * f,
+        float * er,
+        float * ei ) = 0;
+      virtual HRESULT __stdcall raw_SetMeasurement (
+        double start,
+        double stop,
+        long num,
+        long mode ) = 0;
+      virtual HRESULT __stdcall raw_GetNumberPoints (
+        long * num ) = 0;
+      virtual HRESULT __stdcall raw_GetStartFrequency (
+        float * start ) = 0;
+      virtual HRESULT __stdcall raw_GetStopFrequency (
+        float * stop ) = 0;
+      virtual HRESULT __stdcall raw_GetS11Data (
+        long num,
+        float * f,
+        float * s11_real,
+        float * s11_imag ) = 0;
+      virtual HRESULT __stdcall raw_GetTemperature (
+        float * temperature ) = 0;
+      virtual HRESULT __stdcall raw_SetTemperature (
+        float temperature ) = 0;
+      virtual HRESULT __stdcall raw_GetRefreshStd (
+        int * std ) = 0;
+      virtual HRESULT __stdcall raw_SetRefreshStd (
+        int std ) = 0;
+      virtual HRESULT __stdcall raw_GetProbeType (
+        int * probe ) = 0;
+      virtual HRESULT __stdcall raw_SetProbeType (
+        int probe ) = 0;
+      virtual HRESULT __stdcall raw_GetCalType (
+        int * cal ) = 0;
+      virtual HRESULT __stdcall raw_SetCalType (
+        int cal ) = 0;
+      virtual HRESULT __stdcall raw_SaveSetupFile (
+        BSTR file ) = 0;
+      virtual HRESULT __stdcall raw_OpenSetupFile (
+        BSTR file ) = 0;
+      virtual HRESULT __stdcall raw_AutoRefreshOnOff (
+        long * OnOff ) = 0;
+      virtual HRESULT __stdcall raw_AutoRefreshOn ( ) = 0;
+      virtual HRESULT __stdcall raw_AutoRefreshOff ( ) = 0;
+      virtual HRESULT __stdcall raw_RefreshCal ( ) = 0;
+      virtual HRESULT __stdcall raw_CalibrateProbeStd1 ( ) = 0;
+      virtual HRESULT __stdcall raw_CalibrateProbeStd2 ( ) = 0;
+      virtual HRESULT __stdcall raw_CalibrateProbeStd3 ( ) = 0;
+      virtual HRESULT __stdcall raw_Quit ( ) = 0;
+      virtual HRESULT __stdcall raw_Show ( ) = 0;
+      virtual HRESULT __stdcall raw_Hide ( ) = 0;
+      virtual HRESULT __stdcall raw_SetIFBW (
+        float bw ) = 0;
+      virtual HRESULT __stdcall raw_ReadIFBW (
+        float * bw ) = 0;
+      virtual HRESULT __stdcall raw_SetPower (
+        float power ) = 0;
+      virtual HRESULT __stdcall raw_ReadPower (
+        float * power ) = 0;
+      virtual HRESULT __stdcall raw_DataToMemory (
+        BSTR name ) = 0;
+      virtual HRESULT __stdcall raw_Mean ( ) = 0;
+      virtual HRESULT __stdcall raw_StdDev ( ) = 0;
+      virtual HRESULT __stdcall raw_SaveDataFile ( ) = 0;
+};
+
+struct __declspec(uuid("467c0d4a-cdfe-48cc-95f3-1bb2455c5502"))
+TransmissionLine;
+    // [ default ] interface ITransmissionLine
+
+struct __declspec(uuid("c543defd-3eee-410a-9591-41e61b0c9f11"))
+ITransmissionLine : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Init ( );
+    HRESULT TriggerMeasurement ( );
+    HRESULT GetMeasurement (
+        long num,
+        float * f,
+        float * er,
+        float * ei,
+        float * ur,
+        float * ui );
+    HRESULT SetMeasurement (
+        double start,
+        double stop,
+        long num,
+        long mode );
+    HRESULT SetSampleHolder (
+        double length,
+        double distance,
+        double thickness,
+        long unit,
+        long type,
+        double fco );
+    HRESULT PerformGrlCal ( );
+    HRESULT OpenSetupFile (
+        _bstr_t file );
+    HRESULT SaveSetupFile (
+        _bstr_t file );
+    HRESULT Quit ( );
+    HRESULT GetRotatedSparameters (
+        long num,
+        float * f,
+        float * s11r,
+        float * s11i,
+        float * s21r,
+        float * s21i,
+        float * s12r,
+        float * s12i,
+        float * s22r,
+        float * s22i );
+    HRESULT SetIFBW (
+        float bw );
+    HRESULT ReadIFBW (
+        float * bw );
+    HRESULT SetPower (
+        float power );
+    HRESULT ReadPower (
+        float * power );
+    HRESULT SetModel (
+        long model );
+    HRESULT GetModel (
+        long * model );
+    HRESULT GetCalForGRL ( );
+    HRESULT MeasureGRLplate ( );
+    HRESULT MeasureGRLempty ( );
+    HRESULT ComputeGRL ( );
+    HRESULT Show ( );
+    HRESULT Hide ( );
+    HRESULT Activate (
+        long chanNum );
+    HRESULT GetTraceName (
+        long traceNum,
+        BSTR * name );
+    HRESULT GetMarkerData (
+        long traceNum,
+        long markerId,
+        float * frequency,
+        float * value );
+    HRESULT GetLimitTestResult (
+        long traceNum,
+        long * result );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Init ( ) = 0;
+      virtual HRESULT __stdcall raw_TriggerMeasurement ( ) = 0;
+      virtual HRESULT __stdcall raw_GetMeasurement (
+        long num,
+        float * f,
+        float * er,
+        float * ei,
+        float * ur,
+        float * ui ) = 0;
+      virtual HRESULT __stdcall raw_SetMeasurement (
+        double start,
+        double stop,
+        long num,
+        long mode ) = 0;
+      virtual HRESULT __stdcall raw_SetSampleHolder (
+        double length,
+        double distance,
+        double thickness,
+        long unit,
+        long type,
+        double fco ) = 0;
+      virtual HRESULT __stdcall raw_PerformGrlCal ( ) = 0;
+      virtual HRESULT __stdcall raw_OpenSetupFile (
+        BSTR file ) = 0;
+      virtual HRESULT __stdcall raw_SaveSetupFile (
+        BSTR file ) = 0;
+      virtual HRESULT __stdcall raw_Quit ( ) = 0;
+      virtual HRESULT __stdcall raw_GetRotatedSparameters (
+        long num,
+        float * f,
+        float * s11r,
+        float * s11i,
+        float * s21r,
+        float * s21i,
+        float * s12r,
+        float * s12i,
+        float * s22r,
+        float * s22i ) = 0;
+      virtual HRESULT __stdcall raw_SetIFBW (
+        float bw ) = 0;
+      virtual HRESULT __stdcall raw_ReadIFBW (
+        float * bw ) = 0;
+      virtual HRESULT __stdcall raw_SetPower (
+        float power ) = 0;
+      virtual HRESULT __stdcall raw_ReadPower (
+        float * power ) = 0;
+      virtual HRESULT __stdcall raw_SetModel (
+        long model ) = 0;
+      virtual HRESULT __stdcall raw_GetModel (
+        long * model ) = 0;
+      virtual HRESULT __stdcall raw_GetCalForGRL ( ) = 0;
+      virtual HRESULT __stdcall raw_MeasureGRLplate ( ) = 0;
+      virtual HRESULT __stdcall raw_MeasureGRLempty ( ) = 0;
+      virtual HRESULT __stdcall raw_ComputeGRL ( ) = 0;
+      virtual HRESULT __stdcall raw_Show ( ) = 0;
+      virtual HRESULT __stdcall raw_Hide ( ) = 0;
+      virtual HRESULT __stdcall raw_Activate (
+        long chanNum ) = 0;
+      virtual HRESULT __stdcall raw_GetTraceName (
+        long traceNum,
+        BSTR * name ) = 0;
+      virtual HRESULT __stdcall raw_GetMarkerData (
+        long traceNum,
+        long markerId,
+        float * frequency,
+        float * value ) = 0;
+      virtual HRESULT __stdcall raw_GetLimitTestResult (
+        long traceNum,
+        long * result ) = 0;
+};
+
+struct __declspec(uuid("35deca4a-5c53-4e76-8d25-85baae08c75d"))
+ResonantCavity;
+    // [ default ] interface IResonantCavity
+
+struct __declspec(uuid("3eac7a04-1de7-4dc6-89b1-4160c9af77d7"))
+IResonantCavity : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Init ( );
+    HRESULT ShowDialog ( );
+    HRESULT MeasureFandQ (
+        float * fs,
+        float * q );
+    HRESULT Zoom ( );
+    HRESULT SetRange (
+        float StartFreq,
+        float StopFreq,
+        float power,
+        float ifbw,
+        int NumPoints );
+    HRESULT CalculateASTM (
+        float vc,
+        float fc,
+        float qc,
+        float vs,
+        float fs,
+        float qs,
+        float * er,
+        float * ei );
+    HRESULT CalculateSPDR (
+        float thickness,
+        float fc,
+        float qc,
+        float fs,
+        float qs,
+        _bstr_t path,
+        float * er,
+        float * ei );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Init ( ) = 0;
+      virtual HRESULT __stdcall raw_ShowDialog ( ) = 0;
+      virtual HRESULT __stdcall raw_MeasureFandQ (
+        float * fs,
+        float * q ) = 0;
+      virtual HRESULT __stdcall raw_Zoom ( ) = 0;
+      virtual HRESULT __stdcall raw_SetRange (
+        float StartFreq,
+        float StopFreq,
+        float power,
+        float ifbw,
+        int NumPoints ) = 0;
+      virtual HRESULT __stdcall raw_CalculateASTM (
+        float vc,
+        float fc,
+        float qc,
+        float vs,
+        float fs,
+        float qs,
+        float * er,
+        float * ei ) = 0;
+      virtual HRESULT __stdcall raw_CalculateSPDR (
+        float thickness,
+        float fc,
+        float qc,
+        float fs,
+        float qs,
+        BSTR path,
+        float * er,
+        float * ei ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_MaterialsMeasLib =
+    {0xa7e69dda,0x25c0,0x4373,{0xad,0xd4,0x94,0x00,0xe5,0x6e,0xcb,0x3a}};
+extern "C" const GUID __declspec(selectany) CLSID_ParallelPlate =
+    {0x45288e15,0xe3b4,0x42c1,{0x96,0x99,0x29,0x8d,0x46,0x99,0x4d,0x87}};
+extern "C" const GUID __declspec(selectany) IID_IParallelPlate =
+    {0xbf0526cb,0x2929,0x4dc8,{0xa3,0x9d,0x75,0x86,0xf4,0x68,0x33,0x6d}};
+extern "C" const GUID __declspec(selectany) CLSID_CoaxialProbe =
+    {0x4cac772f,0x2697,0x4537,{0xb4,0x35,0x16,0x54,0xdf,0x2f,0x82,0x07}};
+extern "C" const GUID __declspec(selectany) IID_ICoaxialProbe =
+    {0xde176a36,0xb97a,0x43c2,{0x97,0x5c,0x53,0x57,0x9e,0x70,0xc8,0xd4}};
+extern "C" const GUID __declspec(selectany) CLSID_TransmissionLine =
+    {0x467c0d4a,0xcdfe,0x48cc,{0x95,0xf3,0x1b,0xb2,0x45,0x5c,0x55,0x02}};
+extern "C" const GUID __declspec(selectany) IID_ITransmissionLine =
+    {0xc543defd,0x3eee,0x410a,{0x95,0x91,0x41,0xe6,0x1b,0x0c,0x9f,0x11}};
+extern "C" const GUID __declspec(selectany) CLSID_ResonantCavity =
+    {0x35deca4a,0x5c53,0x4e76,{0x8d,0x25,0x85,0xba,0xae,0x08,0xc7,0x5d}};
+extern "C" const GUID __declspec(selectany) IID_IResonantCavity =
+    {0x3eac7a04,0x1de7,0x4dc6,{0x89,0xb1,0x41,0x60,0xc9,0xaf,0x77,0xd7}};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\qt\projects\2-axis sfm\build-fsm_ver5_n7-desktop_qt_5_7_0_msvc2013_64bit-profile\release\materialsmeas.tli"
+
+#pragma pack(pop)

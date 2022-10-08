@@ -1,0 +1,804 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 12.00.21005.1 (405c3230).
+//
+// c:\qt\projects\2-axis fsm_final_transfer_ready\build-sfm_2-axis_ver6-desktop_qt_5_7_0_msvc2013_64bit-debug\debug\materialsmeas.tli
+//
+// Wrapper implementations for Win32 type library C:\\MaterialsMeas.tlb
+// compiler-generated file created 05/06/22 at 20:46:18 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IParallelPlate wrapper method implementations
+//
+
+inline HRESULT IParallelPlate::Init ( ) {
+    HRESULT _hr = raw_Init();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Quit ( ) {
+    HRESULT _hr = raw_Quit();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Show ( ) {
+    HRESULT _hr = raw_Show();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Hide ( ) {
+    HRESULT _hr = raw_Hide();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SaveSetupFile ( _bstr_t file ) {
+    HRESULT _hr = raw_SaveSetupFile(file);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::OpenSetupFile ( _bstr_t file ) {
+    HRESULT _hr = raw_OpenSetupFile(file);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SaveDataFile ( ) {
+    HRESULT _hr = raw_SaveDataFile();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::DataToMemory ( _bstr_t name ) {
+    HRESULT _hr = raw_DataToMemory(name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Mean ( ) {
+    HRESULT _hr = raw_Mean();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::StdDev ( ) {
+    HRESULT _hr = raw_StdDev();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::TriggerMeasurement ( ) {
+    HRESULT _hr = raw_TriggerMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetStartFrequency ( double * start ) {
+    HRESULT _hr = raw_GetStartFrequency(start);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetStopFrequency ( double * stop ) {
+    HRESULT _hr = raw_GetStopFrequency(stop);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetNumberPoints ( long * num ) {
+    HRESULT _hr = raw_GetNumberPoints(num);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetSweepType ( long * type ) {
+    HRESULT _hr = raw_GetSweepType(type);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetMeasurement ( long num, float * f, float * er, float * ei ) {
+    HRESULT _hr = raw_GetMeasurement(num, f, er, ei);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetMeasurement ( double start, double stop, long num, long mode ) {
+    HRESULT _hr = raw_SetMeasurement(start, stop, num, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetOSC ( long * unit, double * level ) {
+    HRESULT _hr = raw_GetOSC(unit, level);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetOSC ( long unit, double level ) {
+    HRESULT _hr = raw_SetOSC(unit, level);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetMeasTime ( BSTR * measTime ) {
+    HRESULT _hr = raw_GetMeasTime(measTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetMeasTime ( _bstr_t measTime ) {
+    HRESULT _hr = raw_SetMeasTime(measTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetPointAverage ( long * pointAve ) {
+    HRESULT _hr = raw_GetPointAverage(pointAve);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetPointAverage ( long pointAve ) {
+    HRESULT _hr = raw_SetPointAverage(pointAve);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetSweepAverage ( long * pointAve ) {
+    HRESULT _hr = raw_GetSweepAverage(pointAve);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetSweepAverage ( long pointAve ) {
+    HRESULT _hr = raw_SetSweepAverage(pointAve);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetPointDelay ( double * pointDelay ) {
+    HRESULT _hr = raw_GetPointDelay(pointDelay);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetPointDelay ( double pointDelay ) {
+    HRESULT _hr = raw_SetPointDelay(pointDelay);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetSweepDelay ( double * sweepDelay ) {
+    HRESULT _hr = raw_GetSweepDelay(sweepDelay);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetSweepDelay ( double sweepDelay ) {
+    HRESULT _hr = raw_SetSweepDelay(sweepDelay);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetCalibrationPoints ( long * calPoints ) {
+    HRESULT _hr = raw_GetCalibrationPoints(calPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetCalibrationPoints ( long calPoints ) {
+    HRESULT _hr = raw_SetCalibrationPoints(calPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetFixture ( long * fixture ) {
+    HRESULT _hr = raw_GetFixture(fixture);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetFixture ( long fixture ) {
+    HRESULT _hr = raw_SetFixture(fixture);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Get16451B ( long * electrode, double * diameter, double * thickness, long * method, double * gap ) {
+    HRESULT _hr = raw_Get16451B(electrode, diameter, thickness, method, gap);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Set16451B ( long electrode, double diameter, double thickness, long method, double gap ) {
+    HRESULT _hr = raw_Set16451B(electrode, diameter, thickness, method, gap);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Get16452A ( long * cableLength, long * spacer ) {
+    HRESULT _hr = raw_Get16452A(cableLength, spacer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Set16452A ( long cableLength, long spacer ) {
+    HRESULT _hr = raw_Set16452A(cableLength, spacer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Get16453A ( double * MUTThickness, double * loadReal, double * loadLoss, double * loadThickness ) {
+    HRESULT _hr = raw_Get16453A(MUTThickness, loadReal, loadLoss, loadThickness);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Set16453A ( double MUTThickness, double loadReal, double loadLoss, double loadThickness ) {
+    HRESULT _hr = raw_Set16453A(MUTThickness, loadReal, loadLoss, loadThickness);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Get16454A ( double * height, double * innerDiameter, double * outerDiameter ) {
+    HRESULT _hr = raw_Get16454A(height, innerDiameter, outerDiameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Set16454A ( double height, double innerDiameter, double outerDiameter ) {
+    HRESULT _hr = raw_Set16454A(height, innerDiameter, outerDiameter);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetTemperature ( float * temperature ) {
+    HRESULT _hr = raw_GetTemperature(temperature);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetTemperature ( float temperature ) {
+    HRESULT _hr = raw_SetTemperature(temperature);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetCPNFile ( BSTR * cpnFile ) {
+    HRESULT _hr = raw_GetCPNFile(cpnFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetCPNFile ( _bstr_t cpnFile ) {
+    HRESULT _hr = raw_SetCPNFile(cpnFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::GetCorrectionState ( VARIANT_BOOL * state ) {
+    HRESULT _hr = raw_GetCorrectionState(state);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::SetCorrectionState ( VARIANT_BOOL state ) {
+    HRESULT _hr = raw_SetCorrectionState(state);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Open ( ) {
+    HRESULT _hr = raw_Open();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Short ( ) {
+    HRESULT _hr = raw_Short();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Load ( ) {
+    HRESULT _hr = raw_Load();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::LLC ( ) {
+    HRESULT _hr = raw_LLC();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::Done ( ) {
+    HRESULT _hr = raw_Done();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::ShortCompensation ( ) {
+    HRESULT _hr = raw_ShortCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::AdapterSetup ( ) {
+    HRESULT _hr = raw_AdapterSetup();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::AdapterSetupShort ( ) {
+    HRESULT _hr = raw_AdapterSetupShort();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::OpenCompensation ( ) {
+    HRESULT _hr = raw_OpenCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::LoadCompensation ( ) {
+    HRESULT _hr = raw_LoadCompensation();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::LoadCompensationPass ( ) {
+    HRESULT _hr = raw_LoadCompensationPass();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::ElectrodeAlignment ( ) {
+    HRESULT _hr = raw_ElectrodeAlignment();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IParallelPlate::ElectrodeAlignmentPass ( ) {
+    HRESULT _hr = raw_ElectrodeAlignmentPass();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoaxialProbe wrapper method implementations
+//
+
+inline HRESULT ICoaxialProbe::Init ( ) {
+    HRESULT _hr = raw_Init();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::CalibrateProbe ( ) {
+    HRESULT _hr = raw_CalibrateProbe();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::TriggerProbe ( ) {
+    HRESULT _hr = raw_TriggerProbe();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetMeasurement ( long num, float * f, float * er, float * ei ) {
+    HRESULT _hr = raw_GetMeasurement(num, f, er, ei);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SetMeasurement ( double start, double stop, long num, long mode ) {
+    HRESULT _hr = raw_SetMeasurement(start, stop, num, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetNumberPoints ( long * num ) {
+    HRESULT _hr = raw_GetNumberPoints(num);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetStartFrequency ( float * start ) {
+    HRESULT _hr = raw_GetStartFrequency(start);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetStopFrequency ( float * stop ) {
+    HRESULT _hr = raw_GetStopFrequency(stop);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetS11Data ( long num, float * f, float * s11_real, float * s11_imag ) {
+    HRESULT _hr = raw_GetS11Data(num, f, s11_real, s11_imag);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetTemperature ( float * temperature ) {
+    HRESULT _hr = raw_GetTemperature(temperature);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SetTemperature ( float temperature ) {
+    HRESULT _hr = raw_SetTemperature(temperature);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetRefreshStd ( int * std ) {
+    HRESULT _hr = raw_GetRefreshStd(std);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SetRefreshStd ( int std ) {
+    HRESULT _hr = raw_SetRefreshStd(std);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetProbeType ( int * probe ) {
+    HRESULT _hr = raw_GetProbeType(probe);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SetProbeType ( int probe ) {
+    HRESULT _hr = raw_SetProbeType(probe);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::GetCalType ( int * cal ) {
+    HRESULT _hr = raw_GetCalType(cal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SetCalType ( int cal ) {
+    HRESULT _hr = raw_SetCalType(cal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SaveSetupFile ( _bstr_t file ) {
+    HRESULT _hr = raw_SaveSetupFile(file);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::OpenSetupFile ( _bstr_t file ) {
+    HRESULT _hr = raw_OpenSetupFile(file);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::AutoRefreshOnOff ( long * OnOff ) {
+    HRESULT _hr = raw_AutoRefreshOnOff(OnOff);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::AutoRefreshOn ( ) {
+    HRESULT _hr = raw_AutoRefreshOn();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::AutoRefreshOff ( ) {
+    HRESULT _hr = raw_AutoRefreshOff();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::RefreshCal ( ) {
+    HRESULT _hr = raw_RefreshCal();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::CalibrateProbeStd1 ( ) {
+    HRESULT _hr = raw_CalibrateProbeStd1();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::CalibrateProbeStd2 ( ) {
+    HRESULT _hr = raw_CalibrateProbeStd2();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::CalibrateProbeStd3 ( ) {
+    HRESULT _hr = raw_CalibrateProbeStd3();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::Quit ( ) {
+    HRESULT _hr = raw_Quit();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::Show ( ) {
+    HRESULT _hr = raw_Show();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::Hide ( ) {
+    HRESULT _hr = raw_Hide();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SetIFBW ( float bw ) {
+    HRESULT _hr = raw_SetIFBW(bw);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::ReadIFBW ( float * bw ) {
+    HRESULT _hr = raw_ReadIFBW(bw);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SetPower ( float power ) {
+    HRESULT _hr = raw_SetPower(power);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::ReadPower ( float * power ) {
+    HRESULT _hr = raw_ReadPower(power);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::DataToMemory ( _bstr_t name ) {
+    HRESULT _hr = raw_DataToMemory(name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::Mean ( ) {
+    HRESULT _hr = raw_Mean();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::StdDev ( ) {
+    HRESULT _hr = raw_StdDev();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoaxialProbe::SaveDataFile ( ) {
+    HRESULT _hr = raw_SaveDataFile();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ITransmissionLine wrapper method implementations
+//
+
+inline HRESULT ITransmissionLine::Init ( ) {
+    HRESULT _hr = raw_Init();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::TriggerMeasurement ( ) {
+    HRESULT _hr = raw_TriggerMeasurement();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::GetMeasurement ( long num, float * f, float * er, float * ei, float * ur, float * ui ) {
+    HRESULT _hr = raw_GetMeasurement(num, f, er, ei, ur, ui);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::SetMeasurement ( double start, double stop, long num, long mode ) {
+    HRESULT _hr = raw_SetMeasurement(start, stop, num, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::SetSampleHolder ( double length, double distance, double thickness, long unit, long type, double fco ) {
+    HRESULT _hr = raw_SetSampleHolder(length, distance, thickness, unit, type, fco);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::PerformGrlCal ( ) {
+    HRESULT _hr = raw_PerformGrlCal();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::OpenSetupFile ( _bstr_t file ) {
+    HRESULT _hr = raw_OpenSetupFile(file);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::SaveSetupFile ( _bstr_t file ) {
+    HRESULT _hr = raw_SaveSetupFile(file);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::Quit ( ) {
+    HRESULT _hr = raw_Quit();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::GetRotatedSparameters ( long num, float * f, float * s11r, float * s11i, float * s21r, float * s21i, float * s12r, float * s12i, float * s22r, float * s22i ) {
+    HRESULT _hr = raw_GetRotatedSparameters(num, f, s11r, s11i, s21r, s21i, s12r, s12i, s22r, s22i);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::SetIFBW ( float bw ) {
+    HRESULT _hr = raw_SetIFBW(bw);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::ReadIFBW ( float * bw ) {
+    HRESULT _hr = raw_ReadIFBW(bw);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::SetPower ( float power ) {
+    HRESULT _hr = raw_SetPower(power);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::ReadPower ( float * power ) {
+    HRESULT _hr = raw_ReadPower(power);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::SetModel ( long model ) {
+    HRESULT _hr = raw_SetModel(model);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::GetModel ( long * model ) {
+    HRESULT _hr = raw_GetModel(model);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::GetCalForGRL ( ) {
+    HRESULT _hr = raw_GetCalForGRL();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::MeasureGRLplate ( ) {
+    HRESULT _hr = raw_MeasureGRLplate();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::MeasureGRLempty ( ) {
+    HRESULT _hr = raw_MeasureGRLempty();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::ComputeGRL ( ) {
+    HRESULT _hr = raw_ComputeGRL();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::Show ( ) {
+    HRESULT _hr = raw_Show();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::Hide ( ) {
+    HRESULT _hr = raw_Hide();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::Activate ( long chanNum ) {
+    HRESULT _hr = raw_Activate(chanNum);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::GetTraceName ( long traceNum, BSTR * name ) {
+    HRESULT _hr = raw_GetTraceName(traceNum, name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::GetMarkerData ( long traceNum, long markerId, float * frequency, float * value ) {
+    HRESULT _hr = raw_GetMarkerData(traceNum, markerId, frequency, value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITransmissionLine::GetLimitTestResult ( long traceNum, long * result ) {
+    HRESULT _hr = raw_GetLimitTestResult(traceNum, result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IResonantCavity wrapper method implementations
+//
+
+inline HRESULT IResonantCavity::Init ( ) {
+    HRESULT _hr = raw_Init();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IResonantCavity::ShowDialog ( ) {
+    HRESULT _hr = raw_ShowDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IResonantCavity::MeasureFandQ ( float * fs, float * q ) {
+    HRESULT _hr = raw_MeasureFandQ(fs, q);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IResonantCavity::Zoom ( ) {
+    HRESULT _hr = raw_Zoom();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IResonantCavity::SetRange ( float StartFreq, float StopFreq, float power, float ifbw, int NumPoints ) {
+    HRESULT _hr = raw_SetRange(StartFreq, StopFreq, power, ifbw, NumPoints);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IResonantCavity::CalculateASTM ( float vc, float fc, float qc, float vs, float fs, float qs, float * er, float * ei ) {
+    HRESULT _hr = raw_CalculateASTM(vc, fc, qc, vs, fs, qs, er, ei);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IResonantCavity::CalculateSPDR ( float thickness, float fc, float qc, float fs, float qs, _bstr_t path, float * er, float * ei ) {
+    HRESULT _hr = raw_CalculateSPDR(thickness, fc, qc, fs, qs, path, er, ei);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
